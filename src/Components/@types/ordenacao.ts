@@ -1,0 +1,1 @@
+export type tipoOrdenacao = "Ascending" | "Descending"

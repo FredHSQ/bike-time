@@ -1,0 +1,58 @@
+.containerInput [class~='p-input-icon-right']>[class~='pi'] {
+    position: absolute;
+}
+
+.containerInput [class~='p-input-icon-right']>[class~='pi']:hover {
+    color: var(--roxo-500);
+    cursor: pointer;
+}
+
+.containerInput [class~='p-float-label'] {
+    font-family: 'Exo', sans-serif;
+    font-size: 1.4rem;
+    width: 100%;
+}
+
+.containerInput [class~='p-float-label']:focus {
+    font-family: 'Exo', sans-serif;
+}
+
+.containerInput [class~='p-inputtext'] {
+    width: 100%;
+    align-self: center;
+    font-family: 'Exo 2', sans-serif;
+    text-align: left;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.customInput:focus+.inputLabel {
+    color: var(--cinza-600);
+    font-size: 1rem;
+    font-weight: 500;
+    background: none;
+}
+
+.customInput:disabled {
+    color: var(--roxo-500);
+    opacity: 1 !important;
+}
+
+.inputLabel>p {
+    display: flex;
+    align-items: flex-end;
+}
+
+.inputLabelCadastro>p {
+    color: var(--cinza-100);
+    font-weight: 300;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.customInput:focus+.inputLabelCadastro {
+    color: var(--cinza-100);
+    font-size: 1rem;
+    font-weight: 500;
+}
+

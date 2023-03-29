@@ -1,0 +1,32 @@
+.App {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+}
+
+.containerGeral {
+  display: 'flex'; 
+  width: 300px;
+  flex-direction: "column";
+}
+
+.labelTempo {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.4rem;
+  padding-left: 0.5rem;
+  margin: 20px 0px;
+  color: var(--cinza-500)
+}
+
+.tempoInputGroup {
+  width: "100%";
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.intensidadeEVelocidadeGroup{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px
+}

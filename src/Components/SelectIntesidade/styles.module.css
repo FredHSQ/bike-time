@@ -1,0 +1,25 @@
+.conteudoSelectStatus [class~='p-inputtext'] {
+  font-size: 1.4rem;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 600;
+  color: var(--cinza-400);
+  padding: 1rem;
+  margin: 0;
+  text-align: left;
+  align-self: center;
+}
+
+.conteudoSelectStatus [class~='p-dropdown'] {
+  margin: 0;
+  width: 100%;
+  height: 3.5rem;
+}
+
+.conteudoSelectStatus [class~='p-dropdown'] [class~='p-dropdown-clear-icon']::before {
+  color: var(--roxo-500);
+}
+
+.conteudoSelectStatus [class~='p-dropdown'] [class~='p-dropdown-trigger'] {
+  color: var(--roxo-500);
+  font-size: 1.4rem;
+}
