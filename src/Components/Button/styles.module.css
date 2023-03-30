@@ -1,0 +1,105 @@
+
+.conteudoBotao{
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1rem;
+  gap: 1rem;
+}
+
+.botaoBase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+
+  transition: all 250ms ease;
+}
+
+.primario {
+  padding: 0.6rem 2.3rem;
+
+  border: none;
+  background: var(--roxo-500);
+  
+  font-size: 1.5rem;
+  color: var(--branco);
+  font-weight: 700;
+  text-transform: uppercase;
+  
+  border-radius: 20px;
+  
+}
+
+.primario > span {
+  letter-spacing: 0px;
+
+}
+
+.primario::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  left: 0;
+  background: var(--roxo-900);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.primario:focus {
+  outline: 0;
+}
+
+.primario:hover {
+  background: var(--roxo-900);
+  color: var(--branco);
+}
+
+.primario:disabled {
+  background: var(--cinza-300);
+  cursor: auto;
+}
+
+.secundario {
+  padding: 1rem;
+  
+  border: none;
+  background: none;
+  
+  color: var(--roxo-500);
+  font-weight: 500;  
+}
+
+.secundario:focus {
+  outline: 0;
+}
+
+.secundario:hover {
+  color: var(--roxo-900);
+}
+
+.secundario:disabled {
+  color: var(--cinza-400);
+  cursor: auto;
+}
+
+.terciario {
+  padding: 1rem 2rem;
+
+  border: none;
+  background: none;
+  
+  color: var(--cinza-400);
+  font-weight: 600;
+}
+
+.terciario:focus {
+  outline: 0;
+}
+
+.terciario:hover {
+  color: var(--laranja-500);
+}

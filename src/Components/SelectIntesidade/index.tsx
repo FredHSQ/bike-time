@@ -39,16 +39,12 @@ export const SelectIntensidade = ({ setIntensidade, intensidade }: selectIntensi
   return (
     <div className={styles.conteudoSelectStatus}>
       <Dropdown
-        placeholder={"Não"}
         id="select-intensidade"
         value={intensidade}
         options={intensidadeOptions}
         onChange={(e) => setIntensidade(e.target.value)}
         optionValue="value"
         optionLabel="nome"
-        filterPlaceholder='Encontre um status'
-        emptyFilterMessage={'Nenhum Status com esses termos encontrado.'}
-        showClear
         style={{
           width: "100%",
           color: '#fff',

@@ -39,16 +39,12 @@ export const SelectVelocidade = ({ setVelocidade, velocidade }: selectVelocidade
   return (
     <div className={styles.conteudoSelectStatus}>
       <Dropdown
-        placeholder={"Não"}
         id="select-velocidade"
         value={velocidade}
         options={velocidadeOptions}
         onChange={(e) => setVelocidade(e.target.value)}
         optionValue="value"
         optionLabel="nome"
-        filterPlaceholder='Encontre um status'
-        emptyFilterMessage={'Nenhum Status com esses termos encontrado.'}
-        showClear
         style={{
           width: "100%",
           color: '#fff',

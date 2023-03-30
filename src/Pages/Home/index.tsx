@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
-import styles from './App.module.css';
-import { InputNumbers } from './Components/InputNumbers';
-import { InputTexts } from './Components/InputTexts';
-import { SelectAlternada } from './Components/SelectAlternada';
-import { SelectIntensidade, tiposIntensidade } from './Components/SelectIntesidade';
-import "./Utils/CSSGlobal/global.css";
+import styles from './styles.module.css';
+import { InputNumbers } from '../../Components/InputNumbers';
+import { InputTexts } from '../../Components/InputTexts';
+import { SelectAlternada } from '../../Components/SelectAlternada';
+import { SelectIntensidade, tiposIntensidade } from '../../Components/SelectIntesidade';
+import "../../Utils/CSSGlobal/global.css";
+import 'primeicons/primeicons.css';
+import { Button } from '../../Components/Button';
 
-function App() {
+export const Home = () => {
 
   const [alternada, setAlternada] = useState<boolean>(false);
   const [intensidade, setIntensidade] = useState<tiposIntensidade>("Moderada");
 
   return (
     <div className={styles.App}>
-      <div className={styles.containerGeral}>
+      <div className={styles.containerFormulario}>
+        <div className={styles.labelTempo}>Insira o nome da sessão:</div>
+      </div>
+      <div className={styles.containerFormulario}>
+
         <div className={styles.labelTempo}>Insira o nome da sessão:</div>
         <InputTexts
           placeholder='Nome da sessão'
@@ -43,7 +49,7 @@ function App() {
           </div>
 
         </div>
-        <div className={styles.labelTempo}>Existem alternações de ritimo nessa sessão de treino:</div>
+        <div className={styles.labelTempo}>Existem alternações de ritmo nessa sessão de treino:</div>
 
         <SelectAlternada
           alternada={alternada}
@@ -51,8 +57,7 @@ function App() {
         />
         {alternada ? (
           <div>
-            <div className={styles.labelTempo}>Tempo total da sessão:</div>
-
+            <div className={styles.labelTempo}>Tempo do pedaço da sessão:</div>
             <div className={styles.tempoInputGroup}>
               <div className={styles.tempoInput}>
                 <InputNumbers
@@ -93,6 +98,13 @@ function App() {
                 />
               </div>
             </div>
+            <div className={styles.containerButtonPlus}>
+              <Button
+                title='Adicionar intervalo'
+                importancia='primario'
+                iconLeft={<i className="pi pi-plus" style={{ fontSize: "1.5rem" }} title="Imprimir" />}
+              />
+            </div>
           </div>
         ) : (
           <div className={styles.intensidadeEVelocidadeGroup}>
@@ -118,4 +130,3 @@ function App() {
   );
 }
 
-export default App;

@@ -26,16 +26,12 @@ export const SelectAlternada = ({ setAlternada, alternada }: selectAlternadaProp
   return (
     <div className={styles.conteudoSelectStatus}>
       <Dropdown
-        placeholder={"Não"}
-        id="select-status"
+        id="select-alternada"
         value={alternada}
         options={alternadaOptions}
         onChange={(e) => setAlternada(e.target.value)}
         optionValue="value"
         optionLabel="nome"
-        filterPlaceholder='Encontre um status'
-        emptyFilterMessage={'Nenhum Status com esses termos encontrado.'}
-        showClear
         style={{
           width: "100%",
           color: '#fff',
